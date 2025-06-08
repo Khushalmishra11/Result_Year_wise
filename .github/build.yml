@@ -1,4 +1,3 @@
-
 name: Build LaTeX Resume
 
 on:
@@ -10,17 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Set up LaTeX
-        uses: dante-ev/latex-action@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: khushal_resume.tex
 
-      - name: Compile resume
-        run: latexmk -pdf -file-line-error -interaction=nonstopmode khushal_resume.tex
-
-      - name: Upload PDF
+      - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Resume
+          name: resume
           path: khushal_resume.pdf
