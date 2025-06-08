@@ -1,2 +1,5 @@
-# Khushal Mishra's Resume
-Automatically compiled with GitHub Actions on push.
+# B.Tech Yearwise Marksheets
+
+This repository contains my yearwise marksheets for my B.Tech in Engineering.
+
+
